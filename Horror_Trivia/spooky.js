@@ -93,3 +93,7 @@ const questions = [
 		correctAnswer: "b"
 	}
 ]
+
+function buildQuzzicle(questions, quizzicle, resultsicle, submission){
+	
+}
