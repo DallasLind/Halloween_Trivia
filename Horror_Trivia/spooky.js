@@ -94,5 +94,16 @@ const questions = [
 	}
 ]
 
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
+//Function to create the functionality of the quiz itself/ build the layout
+function theQuiz(){}
+
+
+//The results screen that shows how good or bad the player did
+function showResults(){}
+
+//Run it so the quiz can be built and worked off of
+theQuiz();
+
+
+//Add functionality to the submit button
+submitButton.addEventListener('click', showResults);
