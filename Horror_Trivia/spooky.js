@@ -1,5 +1,5 @@
-const quizzicle = document.getElementById('quiz');
-const resultsicle = document.getElementById('results');
+const quiz = document.getElementById('quiz');
+const result = document.getElementById('results');
 const submission = document.getElementById('submit');
 
 const questions = [
@@ -94,16 +94,5 @@ const questions = [
 	}
 ]
 
-function buildQuzzicle(questions, quizzicle, resultsicle, submission){
-	function showQuestions(questions, quizzicle){
-		let output = [];
-		let answers;
-		for(let i = 0; i < questions.length; i++){
-			answers = [];
-		for(letter in questions[i].answers){
-			answers.push(
-				)
-		}
-		}
-	}
-}
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
