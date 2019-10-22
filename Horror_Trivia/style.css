@@ -14,3 +14,20 @@ h1 {
 	letter-spacing: 3px;
 	font-size: 43px;
 }
+a {
+	color: white;
+	font-family: 'Cinzel', serif;
+	font-size: 8px;
+}
+#questionTitle {
+	font-family: 'Cinzel', serif;
+	color: #FFFAF0;
+}
+
+li {
+	font-family: 'Cinzel', serif;
+	color: #FFFAF0;
+	letter-spacing: 3px;
+	font-size: 30px;
+	list-style-type: none;
+}

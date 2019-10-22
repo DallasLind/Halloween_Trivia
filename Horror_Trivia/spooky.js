@@ -73,7 +73,7 @@ let correctAnswer = 0;
 
 //Hahaha, forgot to actually make the button do anything
 goBtn.onclick = function(){
-	if(i>questions.length -1){
+	if(i >questions.length -1){
 		i=0;
 	}
 	makeQuiz(i);
@@ -102,3 +102,25 @@ function list(name, answerText) {
 	element.innerHTML = btn;
 	return element;
 }
+
+//Scoring
+
+//Music
+let myMusic = document.getElementById("music");
+let isPlaying = false;
+
+function togglePlay(){
+	if(isPlaying) {
+		music.pause()
+	} else {
+		music.play();
+	}
+};
+
+music.onplaying = function(){
+	isPlaying = true;
+};
+
+music.onpause = function(){
+	isPlaying = false;
+};
