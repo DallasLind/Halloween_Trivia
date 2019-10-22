@@ -1,7 +1,9 @@
-const quiz = document.getElementById('quiz');
-const result = document.getElementById('results');
+const questionTitle = document.getElementById('questionTitle');
+const possibleAnswers = document.getElementById('possibleAnswers');
 const submission = document.getElementById('submit');
+let totalCorrect = 0;
 
+//All questions with their respective answers
 const questions = [
 		{
 		question: "Which movie was early career Joel Coen an assistant editor for?",
@@ -64,29 +66,6 @@ const questions = [
 		}
 ];
 
-//Function to create the functionality of the quiz itself/ build the layout
-function theQuiz(){
-	const output = [];
-	questions.forEach(
-		(currentQuestion, questionNumber) => {
-			const answers = [];
-			for(letter in currentQuestion.answers){
-				answers.push(
-
-				);
-			}
-			output.push
-		}
-		);
-}
-
-
-//The results screen that shows how good or bad the player did
-function showResults(){}
-
-//Run it so the quiz can be built and worked off of
-theQuiz();
-
-
-//Add functionality to the submit button
-submitButton.addEventListener('click', showResults);
+//Organize my variables for the function to create my Quiz
+let i = 0;
+let qLength = allQuestions.length;
