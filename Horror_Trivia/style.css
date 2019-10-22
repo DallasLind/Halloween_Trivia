@@ -3,3 +3,14 @@ body {
 	background-repeat: no-repeat;
 	background-size: center;
 }
+
+button {
+
+}
+
+h1 {
+	font-family: 'Cinzel', serif;
+	color: #FFFAF0;
+	letter-spacing: 3px;
+	font-size: 43px;
+}
