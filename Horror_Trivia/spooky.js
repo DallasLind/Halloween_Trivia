@@ -104,9 +104,17 @@ function list(name, answerText) {
 }
 
 //Add Actual Functionality such as scoring or checking against the answers
+function check() {
+	if (0 === qLength) return;
+	let userAnswer = document.getElementById("answers");
+	if(userAnswer === answers) {
+		alert("Correct!");
+	} else {
+		alert("Incorrect");
+	}
+}
 
-
-
+check();
 //Results
 
 
