@@ -1,6 +1,6 @@
 const questionTitle = document.getElementById('questionTitle');
-const possibleAnswers = document.getElementById('possibleAnswers');
 const submission = document.getElementById('submit');
+const possibleAnswers = document.getElementById('possibleAnswers');
 let totalCorrect = 0;
 
 //All questions with their respective answers
@@ -69,3 +69,17 @@ const questions = [
 //Organize my variables for the function to create my Quiz
 let i = 0;
 let qLength = allQuestions.length;
+
+
+
+function makeQuiz(qLength) {
+	let q1 = allQuestions[i];
+	questionTitle.innerText = q1.question;
+
+	possibleAnswers.innerHTML = ""; //reset answers
+	for(key in q1.answers){
+		let radioBtn = "question"+i+"_answers";
+		let answerText = q1.answers[key];
+		possibleAnswers.appendChild(createLi(radioBtn, answerText));
+	}
+}
