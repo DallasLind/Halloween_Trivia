@@ -95,5 +95,15 @@ const questions = [
 ]
 
 function buildQuzzicle(questions, quizzicle, resultsicle, submission){
-	
+	function showQuestions(questions, quizzicle){
+		let output = [];
+		let answers;
+		for(let i = 0; i < questions.length; i++){
+			answers = [];
+		for(letter in questions[i].answers){
+			answers.push(
+				)
+		}
+		}
+	}
 }
