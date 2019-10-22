@@ -1,7 +1,7 @@
 const questionTitle = document.getElementById('questionTitle');
 const submission = document.getElementById('submit');
 const possibleAnswers = document.getElementById('possibleAnswers');
-let totalCorrect = 0;
+
 
 //All questions with their respective answers
 const questions = [
@@ -80,12 +80,12 @@ goBtn.onclick = function(){
 	i++;
 };
 
-//Make quiz and radio buttons appear in the HTML
+//Make quiz and radio buttons appear in the HTML(format and structure)
 function makeQuiz(qLength) {
 	let q1 = questions[i];
 	questionTitle.innerText = q1.question;
 
-	possibleAnswers.innerHTML = ""; //reset answers
+	possibleAnswers.innerHTML = ""; //reset answers so they don't build on top of each other
 	for(key in q1.answers){
 		let radioBtn = "question"+i+"_answers";
 		let answerText = q1.answers[key];
@@ -93,7 +93,7 @@ function makeQuiz(qLength) {
 	}
 }
 
-//Create list for buttons to get through
+//Create list for buttons to get through(format and structure)
 function list(name, answerText) {
 	let element = document.createElement('li');
 	let btn = '<input type="radio" name="' + name + '"';
@@ -103,7 +103,14 @@ function list(name, answerText) {
 	return element;
 }
 
-//Scoring
+//Add Actual Functionality such as scoring or checking against the answers
+
+
+
+//Results
+
+
+
 
 //Music
 let myMusic = document.getElementById("music");

@@ -5,7 +5,7 @@ body {
 }
 
 button {
-
+	justify-content: center;
 }
 
 h1 {
@@ -22,6 +22,7 @@ a {
 #questionTitle {
 	font-family: 'Cinzel', serif;
 	color: #FFFAF0;
+	text-align: center;
 }
 
 li {
@@ -30,4 +31,5 @@ li {
 	letter-spacing: 3px;
 	font-size: 30px;
 	list-style-type: none;
+	text-align: center;
 }
