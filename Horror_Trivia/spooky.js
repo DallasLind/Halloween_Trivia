@@ -3,99 +3,82 @@ const result = document.getElementById('results');
 const submission = document.getElementById('submit');
 
 const questions = [
-	{
+		{
 		question: "Which movie was early career Joel Coen an assistant editor for?",
-		answers: {
-			a: "Halloween 2",
-			b: "The Evil Dead",
-			c: "An American Werewolf in London"
+		answers: ["Halloween 2", "The Evil Dead", "An American Werewolf in London"],
+		correctAnswer: 1	
 		},
-		correctAnswer: "b"
-	},
-	{
+		
+		{
 		question: "True or False - Tony Todd in The Candyman put real bees in his mouth for the movie's climax",
-		answers: {
-			a: "True",
-			b: "False"
+		answers: ["True", "False"],
+		correctAnswer: 0
 		},
-		correctAnswer: "a"
-	},
-	{
+		
+		{
 		question: "How many days did it take to film the Blair Witch Project?",
-		answers: {
-			a: "8 days",
-			b: "14 days",
-			c: "5 days",
+		answers: ["8 days", "14 days", "5 days"],
+		correctAnswer: 0
 		},
-		correctAnswer: "a"
-	},
-	{
+		
+		{
 		question: "What kind of mask is Michael Meyer's mask in Halloween?",
-		answers: {
-			a: "A Generic Mask",
-			b: "A modified William Shatner mask",
-			c: "A modified Leonard Nimoy mask",
+		answers: ["A Generic Mask", "A modified William Shatner mask", "A modified Leonard Nimoy mask"],
+		correctAnswer: 1
 		},
-		correctAnswer: "b"
-	},
-	{
+
+		{
 		question: "Which show had a rejected episode that went on to become Final Destination?",
-		answers: {
-			a: "The Twilight Zone",
-			b: "Tales from the Crypt",
-			c: "The X-Files",
+		answers: ["The Twilight Zone", "Tales from the Crypt", "The X-Files"],
+		correctAnswer: 2
 		},
-		correctAnswer: "c"
-	},
-	{
+
+		{
 		question: "Which installment of the Friday the 13th franchise saw Jason in space?",
-		answers: {
-			a: "Jason X",
-			b: "Friday the 13th Part VI: Jason Lives",
-			c: "Freddy vs. Jason",
+		answers: ["Jason X", "Friday the 13th Part VI: Jason Lives", "Freddy vs. Jason"],
+		correctAnswer: 0
 		},
-		correctAnswer: "a"
-	},
-	{
+	
+		{
 		question: "Where are the infamous Exorcist stairs located?",
-		answers: {
-			a: "Los Angeles",
-			b: "New York City",
-			c: "Georgetown",
+		answers: ["Los Angeles", "New York City", "Georgetown"],
+		correctAnswer: 2
 		},
-		correctAnswer: "c"
-	},
-	{
+
+		{
 		question: "What classic teen comedy did the Texas Chainsaw Massacre 2 poster spoof?",
-		answers: {
-			a: "Ferris Bueller's Day Off",
-			b: "Sixteen Candles",
-			c: "The Breakfast Club",
+		answers: ["Ferris Bueller's Day Off", "Sixteen Candles", "The Breakfast Club"],
+		correctAnswer: 2
 		},
-		correctAnswer: "c"
-	},
-	{
+	
+		{
 		question: "Where did House of 1000 Corpses' Captain Spaulding get his name from?",
-		answers: {
-			a: "Trick question, it's an original name",
-			b: "Groucho Marx character",
-			c: "A famous vaudeville performer",
+		answers: ["Trick question, it's an original name", "Groucho Marx character", "A famous vaudeville performer"],
+		correctAnswer: 1
 		},
-		correctAnswer: "b"
-	},
-	{
+	
+		{
 		question: "Which of these movies were directed by a woman?",
-		answers: {
-			a: "Carrie",
-			b: "The Babadook",
-			c: "Ginger Snaps",
-		},
-		correctAnswer: "b"
-	}
-]
+		answers: ["Carrie", "The Babadook", "Ginger Snaps"],
+		correctAnswer: 1
+		}
+];
 
 //Function to create the functionality of the quiz itself/ build the layout
-function theQuiz(){}
+function theQuiz(){
+	const output = [];
+	questions.forEach(
+		(currentQuestion, questionNumber) => {
+			const answers = [];
+			for(letter in currentQuestion.answers){
+				answers.push(
+
+				);
+			}
+			output.push
+		}
+		);
+}
 
 
 //The results screen that shows how good or bad the player did
