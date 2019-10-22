@@ -71,6 +71,14 @@ let i = 0;
 let qLength = questions.length;
 let correctAnswer = 0;
 
+//Hahaha, forgot to actually make the button do anything
+goBtn.onclick = function(){
+	if(i>questions.length -1){
+		i=0;
+	}
+	makeQuiz(i);
+	i++;
+};
 
 //Make quiz and radio buttons appear in the HTML
 function makeQuiz(qLength) {
