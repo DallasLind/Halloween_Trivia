@@ -68,18 +68,29 @@ const questions = [
 
 //Organize my variables for the function to create my Quiz
 let i = 0;
-let qLength = allQuestions.length;
+let qLength = questions.length;
+let correctAnswer = 0;
 
 
-
+//Make quiz and radio buttons appear in the HTML
 function makeQuiz(qLength) {
-	let q1 = allQuestions[i];
+	let q1 = questions[i];
 	questionTitle.innerText = q1.question;
 
 	possibleAnswers.innerHTML = ""; //reset answers
 	for(key in q1.answers){
 		let radioBtn = "question"+i+"_answers";
 		let answerText = q1.answers[key];
-		possibleAnswers.appendChild(createLi(radioBtn, answerText));
+		possibleAnswers.appendChild(list(radioBtn, answerText));
 	}
+}
+
+//Create list for buttons to get through
+function list(name, answerText) {
+	let element = document.createElement('li');
+	let btn = '<input type="radio" name="' + name + '"';
+	btn += '/>';
+	btn += answerText;
+	element.innerHTML = btn;
+	return element;
 }
