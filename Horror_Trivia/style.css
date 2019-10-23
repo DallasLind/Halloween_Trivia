@@ -33,3 +33,10 @@ li {
 	list-style-type: none;
 	text-align: center;
 }
+
+div#score {
+	content: "Score";
+	display: block;
+	font-size: 25px;
+	color: #FFFAF0;
+}
