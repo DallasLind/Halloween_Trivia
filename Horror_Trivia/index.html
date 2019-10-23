@@ -11,10 +11,17 @@
 	<a onClick="togglePlay()">Optional Music</a>
 	<h1>Horror Movie Trivia</h1>
 	<main>
+		<div class="start">
+			<p>Get ready to test your horror knowledge against a gauntlet of 10 questions! Beware of the consequences if you fail the quiz...</p>
+			<a class="quiz-btn" id="startbtn" href="#">Let's See What Awaits...</a>
+		</div>
+	<div class="container">
 	<h2 id="questionTitle"></h2>
 	<ul id ="possibleAnswers"></ul>
-	<button type="submit" id =goBtn>Think You Got the Chops for This?</button>
+	<button type="submit" id =goBtn>Next...if you Dare</button>
+	<div class="score"></div>
 	<div id="results"></div>
+</div>
 </main>
 <script src="spooky.js"></script>
 </body>
