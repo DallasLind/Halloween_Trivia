@@ -69,11 +69,11 @@ let i = 0;
 let qLength = questions.length;
 let score = 0;
 let currentQIndex = 0;
-let correctA = 0;
+const lastQ = questions.length -1;
 
 //Hahaha, forgot to actually make the button do anything
 goBtn.onclick = function(){
-	if(i >questions.length -1){
+	if(i >questions.length){
 		i=0;
 	}
 	makeQuiz(i);
@@ -104,10 +104,19 @@ function list(name, answerText) {
 	return element;
 }
 
+if(lastQ)
+
 //Scoring
-document.querySelectorAll('input[type=radio]')
+function checkAnswer(answer, correctAnswer){
+	if(answer == questions[currentQIndex].correctAnswer){
+		score++;
+		alert("Correct!");
+	} else {
+		alert("DEAD WRONG");
+	}
+}
 
-
+checkAnswer();
 //Music
 let myMusic = document.getElementById("music");
 let isPlaying = false;
