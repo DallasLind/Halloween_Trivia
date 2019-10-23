@@ -1,3 +1,8 @@
+const questionTitle = document.getElementById('questionTitle');
+const submission = document.getElementById('submit');
+const possibleAnswers = document.getElementById('possibleAnswers');
+let totalCorrect = 0;
+
 //All questions with their respective answers
 const questions = [
 		{
@@ -61,20 +66,58 @@ const questions = [
 		}
 ];
 
-//Alllllll the variables to pull on
-let correct = 0;
-let quizPage = 1;
-let currentIndex = 0;	
-let currentQ = questions[currentIndex];
-let previousQ;
-let previousIndex = 0;
+//Organize my variables for the function to create my Quiz
+let i = 0;
+let qLength = questions.length;
+let score = 0;
+let currentQIndex = 0;
 
-let uls = document.getElementByTagName("ul")[0];
-let button = document.getElementById("submit");
-let questionTitle = document.getElementById("question");
+//Hahaha, forgot to actually make the button do anything
+goBtn.onclick = function(){
+	if(i >questions.length -1){
+		i=0;
+	}
+	makeQuiz(i);
+	i++;
+};
 
+//Make quiz and radio buttons appear in the HTML
+function makeQuiz(qLength) {
+	let q1 = questions[i];
+	questionTitle.innerText = q1.question;
 
+	possibleAnswers.innerHTML = ""; //reset answers
+	for(key in q1.answers){
+		let radioBtn = "question"+i+"_answers";
+		let answerText = q1.answers[key];
+		possibleAnswers.appendChild(list(radioBtn, answerText));
+	}
+}
 
+//Create list for buttons to get through
+function list(name, answerText) {
+	let element = document.createElement('li');
+	let btn = '<input type="radio" name="' + name + '"';
+	btn += '/>';
+	btn += answerText;
+	element.innerHTML = btn;
+	return element;
+}
+
+//Scoring
+let elements = document.querySelector("input[type=radio");
+for(let i = 0; i < questions.length; i++){
+	if(currentQIndex.checked === correctAnswer){
+		alert("Correct!");
+	} else {
+		alert("WRONG");
+	}
+}
+
+function showScore(){
+	document.getElementById("Score").innerHTML = "You Got " +  answers + "/10";
+	console.log("Score is displayed.");
+}
 
 //Music
 let myMusic = document.getElementById("music");
