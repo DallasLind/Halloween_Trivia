@@ -1,7 +1,7 @@
 const questionTitle = document.getElementById('questionTitle');
 const submission = document.getElementById('submit');
 const possibleAnswers = document.getElementById('possibleAnswers');
-
+let totalCorrect = 0;
 
 //All questions with their respective answers
 const questions = [
@@ -73,19 +73,19 @@ let correctAnswer = 0;
 
 //Hahaha, forgot to actually make the button do anything
 goBtn.onclick = function(){
-	if(i >questions.length -1){
+	if(i>questions.length -1){
 		i=0;
 	}
 	makeQuiz(i);
 	i++;
 };
 
-//Make quiz and radio buttons appear in the HTML(format and structure)
+//Make quiz and radio buttons appear in the HTML
 function makeQuiz(qLength) {
 	let q1 = questions[i];
 	questionTitle.innerText = q1.question;
 
-	possibleAnswers.innerHTML = ""; //reset answers so they don't build on top of each other
+	possibleAnswers.innerHTML = ""; //reset answers
 	for(key in q1.answers){
 		let radioBtn = "question"+i+"_answers";
 		let answerText = q1.answers[key];
@@ -93,7 +93,7 @@ function makeQuiz(qLength) {
 	}
 }
 
-//Create list for buttons to get through(format and structure)
+//Create list for buttons to get through
 function list(name, answerText) {
 	let element = document.createElement('li');
 	let btn = '<input type="radio" name="' + name + '"';
@@ -103,22 +103,9 @@ function list(name, answerText) {
 	return element;
 }
 
-//Add Actual Functionality such as scoring or checking against the answers
-function check() {
-	if (0 === qLength) return;
-	let userAnswer = document.getElementById("answers");
-	if(userAnswer === answers) {
-		alert("Correct!");
-	} else {
-		alert("Incorrect");
-	}
-}
+//Make the scoring
 
-check();
-//Results
-
-
-
+//Results Page
 
 //Music
 let myMusic = document.getElementById("music");
