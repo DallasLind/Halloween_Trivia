@@ -1,8 +1,6 @@
 const questionTitle = document.getElementById('questionTitle');
 const submission = document.getElementById('submit');
 const possibleAnswers = document.getElementById('possibleAnswers');
-let totalCorrect = 0;
-
 //All questions with their respective answers
 const questions = [
 		{
@@ -71,6 +69,7 @@ let i = 0;
 let qLength = questions.length;
 let score = 0;
 let currentQIndex = 0;
+let correctA = 0;
 
 //Hahaha, forgot to actually make the button do anything
 goBtn.onclick = function(){
@@ -80,6 +79,7 @@ goBtn.onclick = function(){
 	makeQuiz(i);
 	i++;
 };
+
 
 //Make quiz and radio buttons appear in the HTML
 function makeQuiz(qLength) {
@@ -105,19 +105,8 @@ function list(name, answerText) {
 }
 
 //Scoring
-let elements = document.querySelector("input[type=radio");
-for(let i = 0; i < questions.length; i++){
-	if(currentQIndex.checked === correctAnswer){
-		alert("Correct!");
-	} else {
-		alert("WRONG");
-	}
-}
+document.querySelectorAll('input[type=radio]')
 
-function showScore(){
-	document.getElementById("Score").innerHTML = "You Got " +  answers + "/10";
-	console.log("Score is displayed.");
-}
 
 //Music
 let myMusic = document.getElementById("music");
