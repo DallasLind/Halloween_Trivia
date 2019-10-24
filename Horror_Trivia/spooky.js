@@ -1,66 +1,75 @@
-const questionTitle = document.getElementById('questionTitle');
-const submission = document.getElementById('submit');
-const possibleAnswers = document.getElementById('possibleAnswers');
+const start = document.getElementById("start");
+const quiz = document.getElementById("quiz");
+const question = document.getElementById("question");
+const possibleAnswerA = document.getElementById("A");
+const possibleAnswerB = document.getElementById("B");
+const possibleAnswerC = document.getElementById("C");
+const counter = document.getElementById("counter");
+const timeGauge = document.getElementById("timeGauge");
+const progress = document.getElementById("progress");
+const scoreDiv = document.getElementById("scoreContainer");
 //All questions with their respective answers
 const questions = [
 		{
 		question: "Which movie was early career Joel Coen an assistant editor for?",
-		answers: ["Halloween 2", "The Evil Dead", "An American Werewolf in London"],
-		correctAnswer: 1	
-		},
-		
-		{
+		possibleAnswerA: "Halloween 2", 
+		possibleAnswerB: "The Evil Dead", 
+		possibleAnswerC: "An American Werewolf in London",
+		correctAnswer: "B"	
+		},{
 		question: "True or False - Tony Todd in The Candyman put real bees in his mouth for the movie's climax",
-		answers: ["True", "False"],
-		correctAnswer: 0
-		},
-		
-		{
+		possibleAnswerA: "True", 
+		possibleAnswerB: "False",
+		possibleAnswerC: "What's Candyman"
+		correctAnswer: "A"
+		},{
 		question: "How many days did it take to film the Blair Witch Project?",
-		answers: ["8 days", "14 days", "5 days"],
-		correctAnswer: 0
-		},
-		
-		{
+		possibleAnswerA: "8 days", 
+		possibleAnswerB: "14 days", 
+		possibleAnswerC: "5 days",
+		correctAnswer: "A"
+		},{
 		question: "What kind of mask is Michael Meyer's mask in Halloween?",
-		answers: ["A Generic Mask", "A modified William Shatner mask", "A modified Leonard Nimoy mask"],
-		correctAnswer: 1
-		},
-
-		{
+		possibleAnswerA: "A Generic Mask", 
+		possibleAnswerB: "A modified William Shatner mask", 
+		possibleAnswerC: "A modified Leonard Nimoy mask",
+		correctAnswer: "B"
+		},{
 		question: "Which show had a rejected episode that went on to become Final Destination?",
-		answers: ["The Twilight Zone", "Tales from the Crypt", "The X-Files"],
-		correctAnswer: 2
-		},
-
-		{
+		possibleAnswerA: "The Twilight Zone", 
+		possibleAnswerB: "Tales from the Crypt", 
+		possibleAnswerC: "The X-Files",
+		correctAnswer: "C"
+		},{
 		question: "Which installment of the Friday the 13th franchise saw Jason in space?",
-		answers: ["Jason X", "Friday the 13th Part VI: Jason Lives", "Freddy vs. Jason"],
-		correctAnswer: 0
-		},
-	
-		{
+		possibleAnswerA: "Jason X", 
+		possibleAnswerB: "Friday the 13th Part VI: Jason Lives", 
+		possibleAnswerC: "Freddy vs. Jason",
+		correctAnswer: "A"
+		},{
 		question: "Where are the infamous Exorcist stairs located?",
-		answers: ["Los Angeles", "New York City", "Georgetown"],
-		correctAnswer: 2
-		},
-
-		{
+		possibleAnswerA: "Los Angeles", 
+		possibleAnswerB: "New York City", 
+		possibleAnswerC: "Georgetown",
+		correctAnswer: "C"
+		},{
 		question: "What classic teen comedy did the Texas Chainsaw Massacre 2 poster spoof?",
-		answers: ["Ferris Bueller's Day Off", "Sixteen Candles", "The Breakfast Club"],
-		correctAnswer: 2
-		},
-	
-		{
+		possibleAnswerA: "Ferris Bueller's Day Off", 
+		possibleAnswerB: "Sixteen Candles", 
+		possibleAnswerC: "The Breakfast Club",
+		correctAnswer: "C"
+		},{
 		question: "Where did House of 1000 Corpses' Captain Spaulding get his name from?",
-		answers: ["Trick question, it's an original name", "Groucho Marx character", "A famous vaudeville performer"],
-		correctAnswer: 1
-		},
-	
-		{
+		possibleAnswerA: "Trick question, it's an original name", 
+		possibleAnswerB: "A Groucho Marx character", 
+		possibleAnswerC: "A famous vaudeville performer"],
+		correctAnswer: "B"
+		},{
 		question: "Which of these movies were directed by a woman?",
-		answers: ["Carrie", "The Babadook", "Ginger Snaps"],
-		correctAnswer: 1
+		possibleAnswerA: "Carrie", 
+		possibleAnswerB: "The Babadook", 
+		possibleAnswerC: "Ginger Snaps",
+		correctAnswer: "B"
 		}
 ];
 
