@@ -64,65 +64,6 @@ const questions = [
 		}
 ];
 
-//Organize my variables for the function to create my Quiz
-let i = 0;
-let qLength = questions.length;
-let score = 0;
-let currentQIndex = 0;
-const lastQ = questions.length -1;
-
-//Hahaha, forgot to actually make the button do anything
-goBtn.onclick = function(){
-	if(i >questions.length){
-		i=0;
-	}
-	makeQuiz(i);
-	i++;
-	checkAnswer1();
-};
-
-
-//Make quiz and radio buttons appear in the HTML
-function makeQuiz(qLength) {
-	let q1 = questions[i];
-	questionTitle.innerText = q1.question;
-
-	possibleAnswers.innerHTML = ""; //reset answers
-	for(key in q1.answers){
-		let radioBtn = "question"+i+"_answers";
-		let answerText = q1.answers[key];
-		possibleAnswers.appendChild(list(radioBtn, answerText));
-
-	}
-
-}
-
-//Create list for buttons to get through
-function list(name, answerText) {
-	let element = document.createElement('li');
-	let btn = '<input type="radio" name="' + name + '"';
-	btn += '/>';
-	btn += answerText;
-	element.innerHTML = btn;
-	return element;
-}
-function gameover (){
-	document.getElementById("score").innerHTML = "Score: " + score;
-	document.getElementById("score").style.display = "block";
-
-}
-//Scoring
-function checkAnswer1(correctAnswer){
-	document.getElementById(possibleAnswers)
-	if(goBtn.checked = possibleAnswers.correctAnswer){
-		score++
-		alert("Correct!");
-	} else {
-		alert("Dead wrong");
-	}
-}
-
-
 
 //Music
 let myMusic = document.getElementById("music");

@@ -9,11 +9,25 @@
 	<audio id="music" src="music/HalloweenTheme.mp3" preload="auto">
 	</audio>
 	<a onClick="togglePlay()">Optional Music</a>
-	<h1>Horror Movie Trivia</h1>
-	<h2 id="questionTitle"></h2>
-	<ul id ="possibleAnswers"></ul>
-	<button type="submit" id =goBtn>Let's See How Ghoulish Good You Are...</button>
-	<div id="score"></div>
+	 <div id="container">
+        <div id="start">Let's See How Ghoulish Good You Are...</div>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="possibleAnswers">
+                <div class="answer" id="A" onclick="checkAnswer('A')"></div>
+                <div class="answer" id="B" onclick="checkAnswer('B')"></div>
+                <div class="answer" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="btimeGauge"></div>
+                <div id="timeGauge"></div>
+            </div>
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
 <script src="spooky.js"></script>
 </body>
 </html>
