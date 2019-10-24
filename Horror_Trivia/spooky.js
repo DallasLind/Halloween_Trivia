@@ -120,19 +120,17 @@ if(currentQ < lastQ){
 }
 
 function correctA(){
-	document.getElementById(currentQ).style.backgroundColor = "green";
-	alert("Correct");
+	alert("Correct...this time");
 }
 
 function wrongA(){
-	document.getElementById(currentQ).style.backgroundColor = "red";
-	alert("Wrong");
+	alert("DEAD WRONG");
 }
 
 function makeScore(){
-	scoreDiv.style.display = "block";
 	const scoring = (score/questions.length);
-	scoreDiv.innerHTML = scoring;
+	document.getElementById('score').innerHTML = "Score: " + score;
+	console.log(scoring);
 }
 
 //Music
