@@ -15,10 +15,10 @@ const questions = [
 		possibleAnswerC: "An American Werewolf in London",
 		correctAnswer: "B"	
 		},{
-		question: "True or False - Tony Todd in The Candyman put real bees in his mouth for the movie's climax",
-		possibleAnswerA: "True", 
-		possibleAnswerB: "False",
-		possibleAnswerC: "What's Candyman",
+		question: "What are the colors of Freddy Kreuger's famous sweater?",
+		possibleAnswerA: "Red and Green", 
+		possibleAnswerB: "Red and Brown",
+		possibleAnswerC: "Green and Brown",
 		correctAnswer: "A"
 		},{
 		question: "How many days did it take to film the Blair Witch Project?",
@@ -95,7 +95,7 @@ function startQ(){
 	progressQ();
 	start.style.display = "none";
 	quiz.style.display = "block";
-	document.getElementById("start").textContent = "Once you enter there's no going back...";
+	document.getElementById(start).textContent = "Once you enter there's no going back...";
 }
 
 function progressQ(){

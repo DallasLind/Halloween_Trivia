@@ -43,11 +43,40 @@ h2, p{
 #score{
 	display: block;
 	font-size: 25px;
-	color: #FFFAF0;
-	z-index: 100;
+	color: red;
 	font-family: 'Cinzel', serif;
 	text-align: center;
 	margin: 0 auto;
+    opacity: 1;
+    animation: heartbeat 3s infinite;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
 }
 
 button {
@@ -55,4 +84,6 @@ button {
 	color: white;
 	text-align: center;
 	text-decoration: none;
+	display: inline-block;
+	padding: 
 }
