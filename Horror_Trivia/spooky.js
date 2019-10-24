@@ -78,6 +78,7 @@ goBtn.onclick = function(){
 	}
 	makeQuiz(i);
 	i++;
+	checkAnswer1();
 };
 
 
@@ -91,7 +92,9 @@ function makeQuiz(qLength) {
 		let radioBtn = "question"+i+"_answers";
 		let answerText = q1.answers[key];
 		possibleAnswers.appendChild(list(radioBtn, answerText));
+
 	}
+
 }
 
 //Create list for buttons to get through
@@ -103,20 +106,24 @@ function list(name, answerText) {
 	element.innerHTML = btn;
 	return element;
 }
+function gameover (){
+	document.getElementById("score").innerHTML = "Score: " + score;
+	document.getElementById("score").style.display = "block";
 
-if(lastQ)
-
+}
 //Scoring
-function checkAnswer(answer, correctAnswer){
-	if(answer == questions[currentQIndex].correctAnswer){
-		score++;
+function checkAnswer1(correctAnswer){
+	document.getElementById(possibleAnswers)
+	if(goBtn.checked = possibleAnswers.correctAnswer){
+		score++
 		alert("Correct!");
 	} else {
-		alert("DEAD WRONG");
+		alert("Dead wrong");
 	}
 }
 
-checkAnswer();
+
+
 //Music
 let myMusic = document.getElementById("music");
 let isPlaying = false;
