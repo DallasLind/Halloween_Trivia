@@ -4,8 +4,6 @@ const question = document.getElementById("question");
 const possibleAnswerA = document.getElementById("A");
 const possibleAnswerB = document.getElementById("B");
 const possibleAnswerC = document.getElementById("C");
-const counter = document.getElementById("counter");
-const timeGauge = document.getElementById("timeGauge");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
 //All questions with their respective answers
@@ -20,7 +18,7 @@ const questions = [
 		question: "True or False - Tony Todd in The Candyman put real bees in his mouth for the movie's climax",
 		possibleAnswerA: "True", 
 		possibleAnswerB: "False",
-		possibleAnswerC: "What's Candyman"
+		possibleAnswerC: "What's Candyman",
 		correctAnswer: "A"
 		},{
 		question: "How many days did it take to film the Blair Witch Project?",
@@ -62,7 +60,7 @@ const questions = [
 		question: "Where did House of 1000 Corpses' Captain Spaulding get his name from?",
 		possibleAnswerA: "Trick question, it's an original name", 
 		possibleAnswerB: "A Groucho Marx character", 
-		possibleAnswerC: "A famous vaudeville performer"],
+		possibleAnswerC: "A famous vaudeville performer",
 		correctAnswer: "B"
 		},{
 		question: "Which of these movies were directed by a woman?",
@@ -77,14 +75,14 @@ const lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
 const timing = 20; //Setting the timer for 20s per Q
-let timer;
+let timer; //if I make a timer that is
 let score = 0;
 
 //Make the questions appear
 function makeQ(){
 	let q = questions[currentQ];
 
-	question.innerHTML = <"p"> + q.question + "</p>";
+	question.innerHTML = "<p>" + q.question + "</p>";
 	possibleAnswerA.innerHTML = q.possibleAnswerA;
 	possibleAnswerB.innerHTML = q.possibleAnswerB;
 	possibleAnswerC.innerHTML = q.possibleAnswerC;
@@ -95,10 +93,47 @@ start.addEventListener("click", startQ);
 function startQ(){
 	makeQ();
 	progressQ();
-	timer = setInterval(counter, 25000);
+	start.style.display = "none";
+	quiz.style.display = "block";
 }
 
-function progressQ();
+function progressQ(){
+	for(let qIndex = 0; qIndex <= lastQ; qIndex++){
+		progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+	}
+}
+
+function checkA(answer){
+	if(answer == questions[currentQ].correctAnswer){
+		score++;
+		correctA();
+	}else{
+		wrongA();
+	}
+count = 0;
+if(currentQ < lastQ){
+	currentQ++;
+	makeQ();
+}else{
+	makeScore();
+	}
+}
+
+function correctA(){
+	document.getElementById(currentQ).style.backgroundColor = "green";
+	alert("Correct");
+}
+
+function wrongA(){
+	document.getElementById(currentQ).style.backgroundColor = "red";
+	alert("Wrong");
+}
+
+function makeScore(){
+	scoreDiv.style.display = "block";
+	const scoring = (score/questions.length);
+	scoreDiv.innerHTML = scoring;
+}
 
 //Music
 let myMusic = document.getElementById("music");

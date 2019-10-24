@@ -10,23 +10,19 @@
 	</audio>
 	<a onClick="togglePlay()">Optional Music</a>
 	 <div id="container">
-        <div id="start">Let's See How Ghoulish Good You Are...</div>
+        <div id="start"> <button type="button">Let's See How Ghoulish Good You Are...</button></div>
         <div id="quiz" style="display: none">
             <div id="question"></div>
             <div id="possibleAnswers">
-                <div class="answer" id="A" onclick="checkAnswer('A')"></div>
-                <div class="answer" id="B" onclick="checkAnswer('B')"></div>
-                <div class="answer" id="C" onclick="checkAnswer('C')"></div>
-            </div>
-            <div id="timer">
-                <div id="counter"></div>
-                <div id="btimeGauge"></div>
-                <div id="timeGauge"></div>
+                <div class="answer" id="A" onclick="checkA('A')"></div>
+                <div class="answer" id="B" onclick="checkA('B')"></div>
+                <div class="answer" id="C" onclick="checkA('C')"></div>
             </div>
             <div id="progress"></div>
         </div>
         <div id="scoreContainer" style="display: none"></div>
     </div>
+</body>
 <script src="spooky.js"></script>
 </body>
 </html>

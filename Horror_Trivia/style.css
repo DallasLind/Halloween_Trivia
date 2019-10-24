@@ -25,7 +25,7 @@ h2, p{
 	text-align: center;
 }
 
-li {
+.answer {
 	font-family: 'Cinzel', serif;
 	color: #FFFAF0;
 	letter-spacing: 3px;
