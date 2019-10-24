@@ -73,6 +73,32 @@ const questions = [
 		}
 ];
 
+const lastQ = questions.length - 1;
+let currentQ = 0;
+let count = 0;
+const timing = 20; //Setting the timer for 20s per Q
+let timer;
+let score = 0;
+
+//Make the questions appear
+function makeQ(){
+	let q = questions[currentQ];
+
+	question.innerHTML = <"p"> + q.question + "</p>";
+	possibleAnswerA.innerHTML = q.possibleAnswerA;
+	possibleAnswerB.innerHTML = q.possibleAnswerB;
+	possibleAnswerC.innerHTML = q.possibleAnswerC;
+}
+
+start.addEventListener("click", startQ);
+
+function startQ(){
+	makeQ();
+	progressQ();
+	timer = setInterval(counter, 25000);
+}
+
+function progressQ();
 
 //Music
 let myMusic = document.getElementById("music");
