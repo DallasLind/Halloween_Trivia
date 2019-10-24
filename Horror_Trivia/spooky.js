@@ -95,7 +95,6 @@ function startQ(){
 	progressQ();
 	start.style.display = "none";
 	quiz.style.display = "block";
-	document.getElementById(start).textContent = "Once you enter there's no going back...";
 }
 
 function progressQ(){
@@ -117,6 +116,7 @@ if(currentQ < lastQ){
 	makeQ();
 }else{
 	makeScore();
+	redo();
 	}
 }
 
@@ -131,6 +131,9 @@ function wrongA(){
 function makeScore(){
 	document.getElementById("score").textContent= "Score: " + score;
 }
+
+
+
 
 //Music
 let myMusic = document.getElementById("music");

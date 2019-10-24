@@ -19,6 +19,12 @@ a {
 	font-family: 'Cinzel', serif;
 	font-size: 8px;
 }
+
+#reset{
+	color:red;
+	font-size: 20px;
+}
+
 h2, p{
 	font-family: 'Cinzel', serif;
 	color: #FFFAF0;
