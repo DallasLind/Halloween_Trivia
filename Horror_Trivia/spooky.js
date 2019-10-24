@@ -74,8 +74,8 @@ const questions = [
 const lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
-const timing = 20; //Setting the timer for 20s per Q
-let timer; //if I make a timer that is
+/* const timing = 20; //Setting the timer for 20s per Q
+let timer; //if I make a timer that is */
 let score = 0;
 
 //Make the questions appear
@@ -95,6 +95,7 @@ function startQ(){
 	progressQ();
 	start.style.display = "none";
 	quiz.style.display = "block";
+	document.getElementById("start").textContent = "Once you enter there's no going back...";
 }
 
 function progressQ(){
@@ -128,9 +129,7 @@ function wrongA(){
 }
 
 function makeScore(){
-	const scoring = (score/questions.length);
-	document.getElementById('score').innerHTML = "Score: " + score;
-	console.log(scoring);
+	document.getElementById("score").textContent= "Score: " + score;
 }
 
 //Music

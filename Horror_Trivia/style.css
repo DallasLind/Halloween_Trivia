@@ -40,9 +40,19 @@ h2, p{
 	transition: all 1s ease;
 }
 
-#scoreContainer {
+#score{
 	display: block;
 	font-size: 25px;
 	color: #FFFAF0;
 	z-index: 100;
+	font-family: 'Cinzel', serif;
+	text-align: center;
+	margin: 0 auto;
+}
+
+button {
+	background-color: red;
+	color: white;
+	text-align: center;
+	text-decoration: none;
 }
