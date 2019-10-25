@@ -8,3 +8,7 @@ This is a simple 10 question trivia game themed around horror movies made just i
 * JavaScript
 * CSS
 
+### Additional Resources
+* Used modernAlert.js to alter the look of the alert boxes
+* Heartsound sound effect is courtesy of [InspectorJ from FreeSound](https://freesound.org/people/InspectorJ/sounds/485076/)
+* Purchased the Halloween Theme Song from Amazon 
