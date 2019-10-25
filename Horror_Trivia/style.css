@@ -9,6 +9,7 @@ body {
 	background-image: url('http://getwallpapers.com/wallpaper/full/d/3/4/73439.jpg');
 	background-repeat: no-repeat;
 	background-size: center;
+	height: 100%;
 }
 
 button {
@@ -17,11 +18,20 @@ button {
 	margin: 0 auto;
 	width: 30%;
 	height: 100%;
-	background-color: red;
+	background-color: transparent;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	justify-content: center;
+	font-size: 100%;
+	font-family: 'Cinzel', serif;
+}
+
+button:hover {
+	background-color: red;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
 }
 
 h1 {
@@ -48,15 +58,12 @@ a:hover {
 	font-size: 15px;
 	border-style: dotted;
 	opacity: .8;
+	bottom: 2;
 }
 
 #reset:hover {
 	opacity: 1;
 	text-shadow: black 0.1em 0.1em 0.2em
-}
-
-img{
-	margin: 0 auto;
 }
 
 h3{
@@ -107,6 +114,7 @@ p{
 	margin: 0 auto;
     opacity: 1;
     animation: heartbeat 3s infinite;
+    font-weight: bold;
 }
 
 @keyframes heartbeat
