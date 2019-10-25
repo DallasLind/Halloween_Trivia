@@ -82,7 +82,7 @@ let score = 0;
 function makeQ(){
 	let q = questions[currentQ];
 
-	question.innerHTML = "<p>" + q.question + "</p>";
+	question.innerHTML = "<h3>" + q.question + "</h3>";
 	possibleAnswerA.innerHTML = q.possibleAnswerA;
 	possibleAnswerB.innerHTML = q.possibleAnswerB;
 	possibleAnswerC.innerHTML = q.possibleAnswerC;
@@ -119,15 +119,23 @@ if(currentQ < lastQ){
 	}
 }
 
-modernAlert();
 
 function correctA(){
-	alert("Correct...this time");
+	modernAlert.alert("Correct...this time", "You're Right!");
 }
 
 function wrongA(){
-	alert("DEAD WRONG");
+	modernAlert.alert("DEAD WRONG", "Incorrect!");
 }
+
+modernAlert({
+	 overlayColor: 'rgba(100, 0, 0, 0.5)',
+     overlayBlur: 3,
+     titleBackgroundColor: 'black',
+     titleColor: '#800000',
+     defaultButtonsText: {ok : 'Proceed'}
+});
+
 
 
 function makeScore(){
@@ -137,6 +145,7 @@ function makeScore(){
 	audio.play();
 	audio.volume = 1;
 }
+
 
 
 
