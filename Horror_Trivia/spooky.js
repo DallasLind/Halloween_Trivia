@@ -119,6 +119,8 @@ if(currentQ < lastQ){
 	}
 }
 
+modernAlert();
+
 function correctA(){
 	alert("Correct...this time");
 }
@@ -133,6 +135,7 @@ function makeScore(){
 	let audio = new Audio("music/heartbeat.WAV");
 	audio.loop = true;
 	audio.play();
+	audio.volume = 1;
 }
 
 
