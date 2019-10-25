@@ -116,7 +116,6 @@ if(currentQ < lastQ){
 	makeQ();
 }else{
 	makeScore();
-	redo();
 	}
 }
 
@@ -128,8 +127,12 @@ function wrongA(){
 	alert("DEAD WRONG");
 }
 
+
 function makeScore(){
 	document.getElementById("score").textContent= "Score: " + score;
+	let audio = new Audio("music/heartbeat.WAV");
+	audio.loop = true;
+	audio.play();
 }
 
 
