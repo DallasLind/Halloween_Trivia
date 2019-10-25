@@ -6,7 +6,7 @@ const possibleAnswerB = document.getElementById("B");
 const possibleAnswerC = document.getElementById("C");
 const progress = document.getElementById("progress");
 const scoreDiv = document.getElementById("scoreContainer");
-//All questions with their respective answers
+
 const questions = [
 		{
 		question: "Which movie was early career Joel Coen an assistant editor for?",
@@ -74,11 +74,8 @@ const questions = [
 const lastQ = questions.length - 1;
 let currentQ = 0;
 let count = 0;
-/* const timing = 20; //Setting the timer for 20s per Q
-let timer; //if I make a timer that is */
 let score = 0;
 
-//Make the questions appear
 function makeQ(){
 	let q = questions[currentQ];
 
@@ -147,10 +144,6 @@ function makeScore(){
 }
 
 
-
-
-
-//Music
 let myMusic = document.getElementById("music");
 let isPlaying = false;
 
