@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 body {
@@ -28,9 +29,23 @@ a {
 	cursor: pointer;
 }
 
+a:hover {
+	color:red;
+}
+
 #reset{
 	color:red;
 	font-size: 20px;
+	float: right;
+	margin-top: -150px;
+	font-size: 15px;
+	border-style: dotted;
+	opacity: .8;
+}
+
+#reset:hover {
+	opacity: 1;
+	text-shadow: black 0.1em 0.1em 0.2em
 }
 
 h3{
