@@ -130,7 +130,7 @@ function wrongA(){
 
 modernAlert({
 	 overlayColor: 'rgba(100, 0, 0, 0.5)',
-     overlayBlur: 3,
+     overlayBlur: 5,
      titleBackgroundColor: 'black',
      titleColor: '#800000',
      defaultButtonsText: {ok : 'Proceed'}

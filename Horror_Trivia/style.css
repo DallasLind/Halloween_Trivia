@@ -51,6 +51,8 @@ p{
 	margin-left: -50px;
 	top: 30%;
 	margin-top: -50px;
+	min-height: 100vh;
+	justify-content: center;
 }
 
 
@@ -121,5 +123,9 @@ footer{
  	font-family: 'Cinzel', serif;
  	color: #FFFAF0;
  	font-size: 12px;
- 	top: 85%;
+ 	bottom: 0;
+ 	width: 100%;
+ 	background-color: grey;
+ 	position: absolute;
+ 	height: 1.25rem;
 }
