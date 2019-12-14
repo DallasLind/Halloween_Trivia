@@ -24,5 +24,5 @@ I would like to alter the design of the page overall since it's a bit simple. My
 
 ### Additional Resources
 * Used modernAlert.js to alter the look of the alert boxes
-* Heartsound sound effect is courtesy of [InspectorJ from FreeSound](https://freesound.org/people/InspectorJ/sounds/485076/)
+* Heartbeat sound effect is courtesy of [InspectorJ from FreeSound](https://freesound.org/people/InspectorJ/sounds/485076/)
 * Purchased the Halloween Theme Song from Amazon 
