@@ -137,7 +137,7 @@ modernAlert({
 
 function makeScore(){
 	document.getElementById("score").textContent= "Score: " + score;
-	let audio = new Audio("music/heartbeat.WAV");
+	let audio = new Audio("../music/heartbeat.WAV");
 	audio.loop = true;
 	audio.play();
 	audio.volume = 1;
@@ -162,3 +162,5 @@ music.onplaying = function(){
 music.onpause = function(){
 	isPlaying = false;
 };
+
+
