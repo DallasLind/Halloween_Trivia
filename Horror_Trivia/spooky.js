@@ -90,6 +90,8 @@ start.addEventListener("click", startQ);
 function startQ(){
 	makeQ();
 	progressQ();
+	let myMusic = new Audio('./Music/HalloweenTheme.mp3');
+	myMusic.play();
 	start.style.display = "none";
 	quiz.style.display = "block";
 }
@@ -137,30 +139,12 @@ modernAlert({
 
 function makeScore(){
 	document.getElementById("score").textContent= "Score: " + score;
-	let audio = new Audio("../music/heartbeat.WAV");
+	let audio = new Audio("./Music/heartbeat.WAV");
 	audio.loop = true;
 	audio.play();
 	audio.volume = 1;
 }
 
 
-let myMusic = document.getElementById("music");
-let isPlaying = false;
-
-function togglePlay(){
-	if(isPlaying) {
-		music.pause()
-	} else {
-		music.play();
-	}
-};
-
-music.onplaying = function(){
-	isPlaying = true;
-};
-
-music.onpause = function(){
-	isPlaying = false;
-};
 
 

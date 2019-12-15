@@ -23,6 +23,17 @@ button {
 	font-family: 'Cinzel', serif;
 }
 
+#playMusic {
+	background-color: transparent;
+	font-size: 20px;
+	color: red;
+	font-size: 15px;
+	opacity: .8;
+	bottom: 2px;
+	cursor: pointer;
+	font-family: 'Cinzel', serif;
+}
+
 button:hover {
 	background-color: red;
 	-webkit-transform: scale(0.8);
@@ -106,7 +117,7 @@ p{
 	color: red;
 	font-family: 'Cinzel', serif;
 	text-align: center;
-	margin: 0 auto;
+
     opacity: 1;
     animation: heartbeat 3s infinite;
     font-weight: bold;
