@@ -1,158 +1,153 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  line-height: 2.5em;
 }
 
 body {
-	background-image: url('http://getwallpapers.com/wallpaper/full/d/3/4/73439.jpg');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+  background-image: url("http://getwallpapers.com/wallpaper/full/d/3/4/73439.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 button {
-	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-  	width: 40%;
-	cursor: pointer;
-	background-color: transparent;
-	color: white;
-	font-size: 100%;
-	font-family: 'Cinzel', serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  font-size: 100%;
+  font-family: "Cinzel", serif;
 }
 
 #playMusic {
-	background-color: transparent;
-	font-size: 20px;
-	color: red;
-	font-size: 15px;
-	opacity: .8;
-	bottom: 2px;
-	cursor: pointer;
-	font-family: 'Cinzel', serif;
+  background-color: transparent;
+  font-size: 20px;
+  color: red;
+  font-size: 15px;
+  opacity: 0.8;
+  bottom: 2px;
+  cursor: pointer;
+  font-family: "Cinzel", serif;
 }
 
 button:hover {
-	background-color: red;
-	-webkit-transform: scale(0.8);
-	-ms-transform: scale(0.8);
-	transform: scale(0.8);
+  background-color: red;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 h1 {
-	font-family: 'Cinzel', serif;
-	color: #FFFAF0;
-	letter-spacing: 3px;
-	font-size: 43px;
-	text-align: center;
-	margin-top: 5em;
+  font-family: "Cinzel", serif;
+  color: #fffaf0;
+  letter-spacing: 3px;
+  font-size: 43px;
+  text-align: center;
+  margin-top: 5em;
 }
 
-
 a {
-	color: white;
-	font-family: 'Cinzel', serif;
-	font-size: 8px;
-	cursor: pointer;
+  color: white;
+  font-family: "Cinzel", serif;
+  font-size: 8px;
+  cursor: pointer;
 }
 
 a:hover {
-	color:red;
+  color: red;
 }
 
-#reset{
-	color:red;
-	font-size: 20px;
-	font-size: 15px;
-	border-style: dotted;
-	opacity: .8;
-	bottom: 2px;
+#reset {
+  color: red;
+  font-size: 20px;
+  font-size: 15px;
+  border-style: dotted;
+  opacity: 0.8;
+  bottom: 2px;
 }
 
 #reset:hover {
-	opacity: 1;
-	text-shadow: black 0.1em 0.1em 0.2em
+  opacity: 1;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
-h3{
-	font-family: 'Cinzel', serif;
-	color: #FFFAF0;
-	text-align: center;
+h3 {
+  font-family: "Cinzel", serif;
+  color: #fffaf0;
+  text-align: center;
 }
 
-p{
-	font-family: 'Cinzel', serif;
-	color: red;
+p {
+  font-family: "Cinzel", serif;
+  color: red;
 }
 
 #quiz {
-	width: 100%;
-	margin-right: 50px;
-	min-height: 100vh;
-	margin-top: 13em;
+  width: 100%;
+  margin-right: 50px;
+  min-height: 100vh;
+  margin-top: 13em;
 }
-
 
 .answer {
-	font-family: 'Cinzel', serif;
-	color: #FFFAF0;
-	letter-spacing: 3px;
-	font-size: 30px;
-	list-style-type: none;
-	text-align: center;
-	text-shadow: white 0px 0px 3px;
+  font-family: "Cinzel", serif;
+  color: #fffaf0;
+  letter-spacing: 3px;
+  font-size: 30px;
+  list-style-type: none;
+  text-align: center;
+  text-shadow: white 0px 0px 3px;
 }
 
-.answer:hover{
-	color: red;
-	cursor: pointer;
-	transition: all 1s ease;
+.answer:hover {
+  color: red;
+  cursor: pointer;
+  transition: all 1s ease;
 }
 
-#score{
-	display: block;
-	font-size: 25px;
-	color: red;
-	font-family: 'Cinzel', serif;
-	text-align: center;
-
-    opacity: 1;
-    animation: heartbeat 3s infinite;
-    font-weight: bold;
+#score {
+  display: block;
+  font-size: 55px;
+  color: red;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  text-align: center;
+  opacity: 1;
+  margin-top: 2em;
+  animation: heartbeat 3s infinite;
+  font-weight: bold;
 }
 
-@keyframes heartbeat
-{
-  0%
-  {
-    transform: scale( .75 );
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.75);
   }
-  20%
-  {
-    transform: scale( 1 );
+  20% {
+    transform: scale(1);
   }
-  40%
-  {
-    transform: scale( .75 );
+  40% {
+    transform: scale(0.75);
   }
-  60%
-  {
-    transform: scale( 1 );
+  60% {
+    transform: scale(1);
   }
-  80%
-  {
-    transform: scale( .75 );
+  80% {
+    transform: scale(0.75);
   }
-  100%
-  {
-    transform: scale( .75 );
+  100% {
+    transform: scale(0.75);
   }
 }
 
-@media screen and (min-height: 1366px) {
-	body {
-		height: 100%;
-	}
+@media screen and (min-height: 823px) {
+  body {
+    height: 100%;
+    line-height: 2.6em;
   }
+}
